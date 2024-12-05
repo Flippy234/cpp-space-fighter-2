@@ -1,23 +1,25 @@
 
-#include "BioEnemyShip.h"
+#include "BossShip.h"
 #include "Level.h"
 
 
-BioEnemyShip::BioEnemyShip()
+BossShip::BossShip()
 {
-	SetSpeed(150);
-	SetMaxHitPoints(1);
-	SetCollisionRadius(20);
+	SetSpeed(32);
+	SetMaxHitPoints(32);
+	SetCollisionRadius(150);
 }
 
 
-void BioEnemyShip::Update(const GameTime& gameTime)
+void BossShip::Update(const GameTime& gameTime)
 {
 	if (IsActive())
 	{
-		float x = sin(gameTime.GetTotalTime() * Math::PI + GetIndex());
+		float x = 21*sin(gameTime.GetTotalTime() * Math::PI + GetIndex())-.2;
 		x *= GetSpeed() * gameTime.GetElapsedTime() * 1.4f;
 		TranslatePosition(x, GetSpeed() * gameTime.GetElapsedTime());
+
+		GetPosition().Display();
 
 		if (!IsOnScreen())
 		{
@@ -29,7 +31,7 @@ void BioEnemyShip::Update(const GameTime& gameTime)
 }
 
 
-void BioEnemyShip::Draw(SpriteBatch& spriteBatch)
+void BossShip::Draw(SpriteBatch& spriteBatch)
 {
 	if (IsActive())
 	{
