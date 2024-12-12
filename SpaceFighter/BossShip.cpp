@@ -30,6 +30,11 @@ void BossShip::Update(const GameTime& gameTime)
 	EnemyShip::Update(gameTime);
 }
 
+void BossShip::BossWeapon()
+{
+	FireWeapons();
+}
+
 
 void BossShip::Draw(SpriteBatch& spriteBatch)
 {

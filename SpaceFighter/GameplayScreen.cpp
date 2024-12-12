@@ -4,6 +4,7 @@
 #include "Level.h"
 #include "BossLevel.h"
 #include "Level01.h"
+#include "SecretLevel.h"
 
 GameplayScreen::GameplayScreen(const int levelIndex)
 	: m_levelIndex(levelIndex)
@@ -28,7 +29,7 @@ void GameplayScreen::LoadLevel(const int levelIndex)
 
 	switch (levelIndex)
 	{
-	case 0: m_pLevel = new BossLevel(); break;
+	case 0: m_pLevel = new SecretLevel(); break;
 	//case 0: m_pLevel = new Level01(); break;
 	}
 

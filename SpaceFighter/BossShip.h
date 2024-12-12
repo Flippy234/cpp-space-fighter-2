@@ -23,6 +23,8 @@ public:
 		@param spriteBatch A reference to the game's sprite batch, used for rendering. */
 	virtual void Draw(SpriteBatch& spriteBatch);
 
+	virtual void BossWeapon();
+
 
 private:
 
