@@ -5,6 +5,7 @@
 #include "PlayerShip.h"
 #include "CollisionManager.h"
 #include "Explosion.h"
+#include "PowerUp.h"
 
 using namespace KatanaEngine;
 
@@ -129,7 +130,7 @@ protected:
 	virtual AudioSample* GetBackgroundAudio() { return m_pAudio; }
 
 private:
-
+	
 	static std::vector<Explosion *> s_explosions;
 	//std::vector<Explosion *>::iterator m_explosionIt;
 

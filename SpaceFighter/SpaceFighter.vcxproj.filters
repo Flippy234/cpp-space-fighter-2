@@ -101,6 +101,12 @@
     <ClCompile Include="Weapon.cpp">
       <Filter>Source Files\Game Objects\Weapons</Filter>
     </ClCompile>
+    <ClCompile Include="PowerUp.cpp">
+      <Filter>Source Files\Game Objects\Misc</Filter>
+    </ClCompile>
+    <ClCompile Include="RapidFirePowerUp.cpp">
+      <Filter>Source Files\Game Objects\Misc</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="MainMenuScreen.h">
@@ -155,6 +161,12 @@
       <Filter>Source Files\Levels</Filter>
     </ClInclude>
     <ClInclude Include="Explosion.h">
+      <Filter>Source Files\Game Objects\Misc</Filter>
+    </ClInclude>
+    <ClInclude Include="PowerUp.h">
+      <Filter>Source Files\Game Objects\Misc</Filter>
+    </ClInclude>
+    <ClInclude Include="RapidFirePowerUp.h">
       <Filter>Source Files\Game Objects\Misc</Filter>
     </ClInclude>
   </ItemGroup>

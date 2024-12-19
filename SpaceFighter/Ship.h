@@ -67,6 +67,15 @@ public:
 
 	virtual IAttachment* GetAttachment(const int index);
 
+	/** @brief Gets a weapon from the ship's weapon list.
+		@param index The index of the weapon to get.
+		@return Returns a pointer to the weapon. */
+	virtual Weapon* GetWeapon(const std::string& key) //{ if (index < m_weapons.size()) return m_weapons[index]; return nullptr; }
+	{
+		if (m_attachments.find(key) == m_attachments.end()) return nullptr;
+		return dynamic_cast<Weapon*>(m_attachments[key]);
+	}
+
 
 protected:
 
@@ -76,15 +85,6 @@ protected:
 	/** @brief Fires the ship's weapons.
 		@param type The type of trigger that fired the weapons. */
 	virtual void FireWeapons(TriggerType type = TriggerType::All);
-
-	/** @brief Gets a weapon from the ship's weapon list.
-		@param index The index of the weapon to get.
-		@return Returns a pointer to the weapon. */
-	virtual Weapon* GetWeapon(const std::string &key) //{ if (index < m_weapons.size()) return m_weapons[index]; return nullptr; }
-	{
-		if (m_attachments.find(key) == m_attachments.end()) return nullptr;
-		return dynamic_cast<Weapon *>(m_attachments[key]);
-	}
 
 	/** @brief Gets the current hit points of the ship.
 		@return Returns the current hit points of the ship. */

@@ -26,6 +26,8 @@ public:
 	static const CollisionType Ship;
 	static const CollisionType Projectile;
 
+	static const CollisionType PowerUp;
+
 	CollisionType &CollisionType::operator=(const CollisionType &type)
 	{
 		m_value = type.m_value;
